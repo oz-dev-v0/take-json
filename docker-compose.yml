@@ -1,0 +1,9 @@
+version: '3'
+services:
+    golang:
+        image: golang:1.13.5
+        working_dir: /go/src/github.com/oz-dev-v0/take-json
+        env_file: ./docker/env
+        tty: true
+        volumes:
+            - ./:/go/src/github.com/oz-dev-v0/take-json

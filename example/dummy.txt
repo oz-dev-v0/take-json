@@ -1,0 +1,2 @@
+2020-04-10 02:12:00 +0000 system.access: { "key-string": "s", "key-int": 1, "key-bool": true, "key-float": 1.1 }
+2020-04-10 02:13:00 +0000 system.access: { "key-string": "ss", "key-int": 2, "key-bool": true, "key-float": 2.2 }
