@@ -19,7 +19,7 @@ var flagsName = struct {
 	fbPrint, fbPrintShort     string
 }{
 	"file", "f",
-	"decodeURI", "d",
+	"decodeURI", "u",
 	"fallbackPrint", "p",
 }
 
