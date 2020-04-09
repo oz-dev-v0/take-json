@@ -3,7 +3,9 @@
 ## install
 
 ```
-$ make install
+$ go install
+$ ln -s $GOPATH/bin/take-json /usr/local/bin/
+$ take-json -h
 ```
 
 ## docker
