@@ -20,8 +20,7 @@ func getFile() (*os.File, error) {
 	}
 	file, e := os.Open(flags.filePath)
 	if e != nil {
-		return nil, errors.Wrapf(e,
-			"unable to read the file %s", flags.filePath)
+		return nil, errors.Wrapf(e, "unable to read the file %s", flags.filePath)
 	}
 	return file, nil
 }
