@@ -8,13 +8,12 @@ import (
 	"net/url"
 	"os"
 	"regexp"
-	"strings"
 )
 
 func excuteTakeJSON(r io.Reader, w io.Writer) error {
 	scanner := bufio.NewScanner(bufio.NewReader(r))
-	results := []string{}
 	for scanner.Scan() {
+		result := ""
 		txt := scanner.Text()
 		if flags.decodeURI {
 			q, err := url.QueryUnescape(txt)
@@ -31,16 +30,16 @@ func excuteTakeJSON(r io.Reader, w io.Writer) error {
 				fmt.Println("error:", err)
 			}
 			if len(b) > 0 {
-				results = append(results, string(b))
+				result = string(b)
 			}
 		}
-		if flags.fallbackPrint && len(results) == 0 {
-			results = append(results, txt)
+		if flags.fallbackPrint && len(s) == 0 {
+			result = txt
 		}
-	}
-	_, e := fmt.Fprintln(w, strings.Join(results, ",\n"))
-	if e != nil {
-		return e
+		_, e := fmt.Fprintln(w, result)
+		if e != nil {
+			return e
+		}
 	}
 	return nil
 }
