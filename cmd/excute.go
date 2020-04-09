@@ -36,7 +36,10 @@ func excuteTakeJSON(r io.Reader, w io.Writer) error {
 		if flags.fallbackPrint && len(s) == 0 {
 			result = txt
 		}
-		_, e := fmt.Fprintln(w, result)
+		if result != "" {
+			result += "\n"
+		}
+		_, e := fmt.Fprint(w, result)
 		if e != nil {
 			return e
 		}
