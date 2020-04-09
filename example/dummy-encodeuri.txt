@@ -1,2 +1,0 @@
-2020-04-10 02:12:00 +0000 system.access: /log?r=%7B%20%22key-string%22:%20%22s%22,%20%22key-int%22:%201,%20%22key-bool%22:%20true,%20%22key-float%22:%201.1%20%7D
-2020-04-10 02:13:00 +0000 system.access: /log?r=%7B%20%22key-string%22:%20%22s%22,%20%22key-int%22:%201,%20%22key-bool%22:%20true,%20%22key-float%22:%201.1%20%7D
